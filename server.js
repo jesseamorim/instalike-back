@@ -1,7 +1,8 @@
 import express from "express";
-console.log(process.env.STRING_CONEXAO)
-const posts = [
-    
+import conectarAoBanco from "./src/config/dbconfig.js";
+
+await conectarAoBanco(process.env.STRING_CONEXAO);
+const posts = [    
   { id: 1, 
     descricao: "Uma foto teste",
     image: "https://placecats.com/millie/300/150" },
